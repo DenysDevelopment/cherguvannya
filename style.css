@@ -1,0 +1,69 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-size: 16px;
+	font-family: sans-serif;
+	color: #fff;
+}
+
+.filter {
+	display: flex;
+	margin-bottom: 50px;
+}
+.filter__item {
+	flex: 1 1 auto;
+	padding: 10px 0;
+	border: 0;
+	margin-bottom: 10px;
+}
+
+.week__item {
+	background: url(bg.jpg) no-repeat center / cover;
+
+	padding: 0.9em 0.6em;
+	margin-bottom: 1em;
+}
+
+.week {
+}
+
+.week__item {
+}
+
+.week__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-bottom: 0.9em;
+	text-transform: capitalize;
+}
+
+.week__day {
+	font-weight: 300;
+	font-size: 1em;
+}
+
+.week__date {
+}
+
+.week__body {
+}
+
+.week__name {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.week__name-child {
+	margin-bottom: 0.6em;
+	font-size: 1.3em;
+}
+.week__count {
+}
