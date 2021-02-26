@@ -5,11 +5,52 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<input class="inputData" type="text" />
-		<button>Отправить</button>
+		<div class="modal">
+			<div class="modal__body">
+				<div class="modal__overlay"></div>
+			</div>
+		</div>
 
-		<script src="admin.js"></script>
+		<form id="form-admin">
+			<select name="nameFirst">
+				<option value="default">Перший черговий</option>
+				<option value="Приходько Максим">Приходько Максим</option>
+				<option value="Здрок Максим">Здрок Максим</option>
+				<option value="Максимук Денис">Максимук Денис</option>
+				<option value="Чирук Роман">Чирук Роман</option>
+				<option value="Смічик Владислав">Смічик Владислав</option>
+				<option value="Антонюк Анатолій">Антонюк Анатолій</option>
+				<option value="Хмарук Ілля">Хмарук Ілля</option>
+				<option value="Мороз Денис">Мороз Денис</option>
+				<option value="Лавренко Ілля">Лавренко Ілля</option>
+				<option value="Шеремета Ілля">Шеремета Ілля</option>
+				<option value="Давидюк Назар">Давидюк Назар</option>
+				<option value="Іннкін Богдан">Іннкін Богдан</option>
+				<option value="Гушинець Роман">Гушинець Роман</option>
+			</select>
+			<select name="nameSecondary">
+				<option value="default">Другій черговий</option>
+				<option value="default">Перший черговий</option>
+				<option value="Приходько Максим">Приходько Максим</option>
+				<option value="Здрок Максим">Здрок Максим</option>
+				<option value="Максимук Денис">Максимук Денис</option>
+				<option value="Чирук Роман">Чирук Роман</option>
+				<option value="Смічик Владислав">Смічик Владислав</option>
+				<option value="Антонюк Анатолій">Антонюк Анатолій</option>
+				<option value="Хмарук Ілля">Хмарук Ілля</option>
+				<option value="Мороз Денис">Мороз Денис</option>
+				<option value="Лавренко Ілля">Лавренко Ілля</option>
+				<option value="Шеремета Ілля">Шеремета Ілля</option>
+				<option value="Давидюк Назар">Давидюк Назар</option>
+				<option value="Іннкін Богдан">Іннкін Богдан</option>
+				<option value="Гушинець Роман">Гушинець Роман</option>
+			</select>
+			<button>Назначити черговими</button>
+		</form>
+
+		<script src="admin.js" type="module"></script>
 	</body>
 </html>

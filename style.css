@@ -22,48 +22,84 @@ body {
 	margin-bottom: 10px;
 }
 
+h1 {
+	color: #000;
+	margin: 20px 10px;
+}
+
 .week__item {
 	background: url(bg.jpg) no-repeat center / cover;
 
-	padding: 0.9em 0.6em;
+	padding: 1em 1.5em;
 	margin-bottom: 1em;
-}
 
-.week {
-}
-
-.week__item {
+	cursor: pointer;
 }
 
 .week__top {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
-	margin-bottom: 0.9em;
-	text-transform: capitalize;
 }
-
-.week__day {
-	font-weight: 300;
-	font-size: 1em;
-}
-
-.week__date {
-}
-
 .week__body {
+	opacity: 0;
+	height: 0;
+	transform: scale(0);
+	transition: all 0.3s;
 }
 
-.week__name {
+.week__not-found {
+	color: rgb(0, 81, 255);
+	font-size: 2em;
+	text-align: center;
+	font-weight: 700;
+	text-shadow: 2px 0px 1px red;
+	animation: box-shadow 1s infinite alternate-reverse linear;
+}
+
+@keyframes box-shadow {
+	100% {
+		text-shadow: -2px 0px 0px red;
+	}
+}
+
+.week__body.active {
+	margin-top: 1.5em;
+	font-size: 1.2em;
+	opacity: 1;
+	transform: scale(1);
+	height: auto;
+}
+
+.week__body.active li {
+	list-style: none;
+	font-size: 1.5em;
+}
+
+.week__body.active li:not(:nth-last-child(1)) {
+	margin-bottom: 0.4em;
+}
+
+/* admin */
+#form-admin {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	flex-direction: column;
+	margin: 5px;
 }
 
-.week__name-child {
-	margin-bottom: 0.6em;
-	font-size: 1.3em;
+#form-admin select {
+	display: block;
+	margin-bottom: 1em;
+	padding: 1em;
+	border: 0;
+	border-bottom: 1px solid rgb(187, 187, 187);
 }
-.week__count {
+
+#form-admin button {
+	padding: 10px 0;
+	border: 0;
+	background: rgb(66, 200, 218);
+	color: #fff;
+	font-weight: 700;
+	font-size: 1.3em;
 }

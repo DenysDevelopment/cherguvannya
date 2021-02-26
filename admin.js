@@ -1,4 +1,5 @@
-const input = document.querySelector('.inputData');
+const form = document.getElementById('form-admin'),
+	weekDay = ['Понеділок', 'Вівторок', 'Середа', 'Четверг', 'Пятниця', 'Суббота', 'Неділя'];
 
 function sendData(opts) {
 	fetch('https://cherguvannya-71680-default-rtdb.firebaseio.com/test.json', {
@@ -8,12 +9,15 @@ function sendData(opts) {
 			'Content-Type': 'application/json',
 		},
 	});
-	console.log(input.value);
 }
 
-document.querySelector('button').addEventListener('click', () => {
+form.addEventListener('submit', (e) => {
+	e.preventDefault();
 	sendData({
-		date: new Date().toDateString(),
-		text: input.value,
+		students: [form.children.nameFirst.value, form.children.nameSecondary.value],
+		date: {
+			day: new Date().toLocaleDateString().split('/'),
+			week: weekDay[new Date().getDay() - 1],
+		},
 	});
 });
